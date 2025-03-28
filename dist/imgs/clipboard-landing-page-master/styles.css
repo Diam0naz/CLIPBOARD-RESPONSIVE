@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  background-color: lightgray;
+}
+.container {
+  height:10vh;
+  padding: 5px;
+  display: grid;
+  max-width: 1440px;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+  grid-template-rows: repeat(4, 200px);
+  grid-template-areas:
+    "area1 area2 area2 area4"
+    "area1 area2 area2 area4"
+    "area8 area3 area5 area4"
+    "area8 area6 area7 area7";
+}
+
+.grid-item-1 {
+  grid-area: area1;
+  border: 0.5px solid hsl(36, 100.00%, 83.30%);
+  background-color: hsl(36, 100.00%, 83.30%);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 200px;
+  align-items: center;
+}
+
+.grid-item-2 {
+  grid-area: area2;
+  border: 0.5px solid hsl(256, 67%, 59%);
+  background-color: hsl(256, 67%, 59%);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-3 {
+    grid-area: area3;
+    border:.5px solid  whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.grid-item-4{
+    grid-area: area4;
+    border:0.5px solid hsl(254, 88%, 90%);
+    background-color: hsl(254, 88%, 90%);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-item-5 {
+    grid-area: area5;
+    border:0.5px solid hsl(39, 100%, 71%);
+    background-color: hsl(39, 100%, 71%);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+.grid-item-6 {
+    grid-area: area6;
+    border:0.5px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 30px;
+}
+.grid-item-7 {
+    grid-area: area7;
+    border: 0.5px solid hsl(256, 67%, 59%);
+    background-color: hsl(256, 67%, 59%);
+    border-radius: 15px;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: row-reverse;
+}
+.grid-item-8 {
+    grid-area: area8;
+    border:0.5px solid hsl(39, 100%, 71%);
+    background-color: hsl(39, 100%, 71%);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid-item-2 > .pic-2 > img{
+  width: 230px;
+  margin-top: 100px;
+}
+.grid-item-1 > .pic-1 > img{
+  width: 150px;
+}
+.grid-item-6 > .pic-6 > img{
+  width: 150px;
+  margin-top: 70px;
+}
+.grid-item-8 > .pic-8 > img{
+  width: 200px;
+  margin: 150px 10px;
+}
+.grid-item-7 > .pic-7 > img{
+  width: 200px;
+}
+.grid-item-3 > .pic-3 > img{
+  width: 250px;
+  margin: 3px;
+}
+.grid-item-4 > .pic-4 > img{
+  width: 200px;
+  height: 180px;
+}
+.grid-item-5 > .pic-5 > img{
+  width: 200px;
+}
+
+.grid-item-7 > span{
+  margin-left: 150px;
+}
+
+@media screen and (max-width: 375px) {
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr  1fr 1fr 1.5fr 2fr;
+    grid-template-areas:
+      "area1"
+      "area2"
+      "area3"
+      "area4"
+      "area5"
+      "area6"
+      "area7"
+      "area8";
+  }
+} 
